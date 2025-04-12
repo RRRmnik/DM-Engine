@@ -200,14 +200,14 @@ void Game::Run()
 {
 	m_IsRunning = Setup();
 	
-	m_pStart();
+	if (m_pStart) m_pStart();
 
 	while (m_IsRunning)
 	{
 		ProcessTime();
 		GetInput();
-		m_pUpdate();
-		m_pRender();
+		if (m_pUpdate) m_pUpdate();
+		if (m_pRender) m_pRender();
 		Display();
 		PollEvents();
 	}

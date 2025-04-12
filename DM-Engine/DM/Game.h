@@ -60,7 +60,7 @@ private:
 	void PollEvents();
 	void GetInput();
 	void Display();
-	
+
 	void (*m_pStart)();
 	void (*m_pUpdate)();
 	void (*m_pRender)();
